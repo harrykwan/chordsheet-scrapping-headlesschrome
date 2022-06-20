@@ -1,0 +1,16 @@
+org: harrykwan
+app: chordsheet-scrapping-headlesschrome
+service: chordsheet-scrapping-headlesschrome
+frameworkVersion: "2 || 3"
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 2048
+  timeout: 29
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi: "*"
